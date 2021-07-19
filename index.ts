@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const url = 'https://jsonplaceholder.typicode.com/todos/25';
+const todoUrl = 'https://jsonplaceholder.typicode.com/todos/25';
+const userUrl = 'https://jsonplaceholder.typicode.com/users';
 
 // define a structure of a todo object
 // help catching errors during development
@@ -10,7 +11,14 @@ interface Todo {
   completed: boolean;
 }
 
-axios.get(url).then(response => {
+interface User {
+  id: number;
+  username: string;
+  email: string;
+  website: string;
+}
+
+axios.get(todoUrl).then(response => {
   const todo = response.data as Todo;
 
   const id = todo.id;
@@ -25,5 +33,27 @@ const logTodo = (id: number, title: string, completed: boolean) => {
     The Todo with ID: ${id}
     Has a title of: ${title}
     Is it finished: ${completed}
+  `);
+};
+
+axios.get(userUrl).then(response => {
+  const users: object[] = response.data;
+
+  for (let i = 0; i < users.length; i++) {
+    let user = users[i] as User;
+    let id = user.id;
+    let username = user.username;
+    let email = user.email;
+    let website = user.website;
+    logUser(id, username, email, website);
+  }
+});
+
+const logUser = (id: number, username: string, email: string, website: string) => {
+  console.log(`
+    User ID: ${id}
+    Username: ${username}
+    Email: ${email}
+    Website: ${website}
   `);
 };
