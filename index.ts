@@ -40,11 +40,7 @@ axios.get(userUrl).then(response => {
   const users: object[] = response.data;
 
   for (let i = 0; i < users.length; i++) {
-    let user = users[i] as User;
-    let id = user.id;
-    let username = user.username;
-    let email = user.email;
-    let website = user.website;
+    let { id, username, email, website } = users[i] as User;
     logUser(id, username, email, website);
   }
 });
