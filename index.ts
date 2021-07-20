@@ -37,10 +37,10 @@ const logTodo = (id: number, title: string, completed: boolean) => {
 };
 
 axios.get(userUrl).then(response => {
-  const users: object[] = response.data;
+  const users: User[] = response.data;
 
   for (let i = 0; i < users.length; i++) {
-    let { id, username, email, website } = users[i] as User;
+    let { id, username, email, website } = users[i];
     logUser(id, username, email, website);
   }
 });
