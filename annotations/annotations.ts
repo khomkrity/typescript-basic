@@ -15,9 +15,9 @@ let anotherValues: Array<string | number> = ['Apple', 2, 'Orange', 3, 4, 'Banana
 
 // enum
 enum PrintMedia {
-  Newspaper = 1,
-  Newsletter,
-  Magazine,
+  Newsletter = getPrintMediaCode('newsletter'),
+  Magazine = Newsletter * 3,
+  Newspaper = 0,
   Book,
 }
 
@@ -27,4 +27,12 @@ function getMedia(mediaName: string): PrintMedia {
   }
 }
 
+function getPrintMediaCode(mediaName: string): number {
+  if (mediaName === 'newsletter') {
+    return 5;
+  }
+}
+
 let mediaType: PrintMedia = getMedia('Forbes'); // returns Magazine
+PrintMedia.Newsletter; // returns 5
+PrintMedia.Magazine; // returns 15
