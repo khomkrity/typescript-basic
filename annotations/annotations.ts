@@ -36,3 +36,8 @@ function getPrintMediaCode(mediaName: string): number {
 let mediaType: PrintMedia = getMedia('Forbes'); // returns Magazine
 PrintMedia.Newsletter; // returns 5
 PrintMedia.Magazine; // returns 15
+
+// any type
+let arr: any[] = ['John', 212, true];
+arr.push('Smith');
+console.log(arr); //Output: [ 'John', 212, true, 'Smith' ]
