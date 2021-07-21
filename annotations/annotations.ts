@@ -41,3 +41,10 @@ PrintMedia.Magazine; // returns 15
 let arr: any[] = ['John', 212, true];
 arr.push('Smith');
 console.log(arr); //Output: [ 'John', 212, true, 'Smith' ]
+
+// return void
+function sayHi(): void {
+  console.log('Hi!');
+}
+
+sayHi(); // return 'Hi!'
