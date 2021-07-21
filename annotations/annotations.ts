@@ -12,3 +12,19 @@ empId = 'E111'; // OK
 let values: (string | number)[] = ['Apple', 2, 'Orange', 3, 4, 'Banana'];
 // or
 let anotherValues: Array<string | number> = ['Apple', 2, 'Orange', 3, 4, 'Banana'];
+
+// enum
+enum PrintMedia {
+  Newspaper = 1,
+  Newsletter,
+  Magazine,
+  Book,
+}
+
+function getMedia(mediaName: string): PrintMedia {
+  if (mediaName === 'Forbes' || mediaName === 'Outlook') {
+    return PrintMedia.Magazine;
+  }
+}
+
+let mediaType: PrintMedia = getMedia('Forbes'); // returns Magazine
