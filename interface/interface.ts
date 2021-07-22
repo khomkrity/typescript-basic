@@ -18,3 +18,21 @@ function printEmployee(id: number, name: string): void {
 }
 
 printEmployee(emp.id, emp.name); //Output: updateKeyValue: key = 2, value = Steve
+
+// another example
+
+interface Vehicle {
+  name: string;
+  year: Date;
+  broken: boolean;
+  summary(): string;
+}
+
+const oldCivic = {
+  name: 'Civic',
+  year: new Date(),
+  broken: true,
+  summary(): string {
+    return `Name: ${this.name} Year: ${this.year} Broken: ${this.broken}`;
+  },
+};
