@@ -32,3 +32,7 @@ ts-node index.ts
 - The TypeScript compiler does not convert interface to JavaScript (aka duck typing or structural subtyping).
 
 ### Classes
+
+TypeScript offers full support for the class keyword introduced in ES2015.
+
+- As with other JavaScript language features, TypeScript adds type annotations and other syntax to allow you to express relationships between classes and other types.
