@@ -1,6 +1,6 @@
 # typescript-basic
 
-> understand typescript syntax
+> understanding basic typescript syntax
 
 ## Prerequisite
 
@@ -33,6 +33,14 @@ ts-node index.ts
 
 ### Classes
 
-TypeScript offers full support for the class keyword introduced in ES2015.
+> TypeScript offers full support for the class keyword introduced in ES2015.
 
 - As with other JavaScript language features, TypeScript adds type annotations and other syntax to allow you to express relationships between classes and other types.
+
+A class definition can include the following:
+
+1. **Fields** − A field is any variable declared in a class. Fields represent **data pertaining to objects**
+
+2. **Constructors** − Responsible for **allocating memory for the objects of the class**
+
+3. **Functions** − Functions represent **actions an object can take.** They are also at times referred to as methods
